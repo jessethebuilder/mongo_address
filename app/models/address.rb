@@ -1,6 +1,8 @@
 class Address
   include Mongoid::Document
 
+  embedded_in :has_address, polymorphic: true
+
   field :label, type: String
   field :street, type: String
   field :street2, type: String
